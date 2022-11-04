@@ -115,12 +115,12 @@ Start-Service -Name WireGuardTunnel`$$tunnelname -ErrorAction SilentlyContinue
 
     $WshShell = New-Object -comObject WScript.Shell
 
-    $Shortcut = $WshShell.CreateShortcut("C:\Users\Public\Desktop\START $tunnelname.lnk")
+    $Shortcut = $WshShell.CreateShortcut("C:\Users\Public\Desktop\Start $tunnelname VPN.lnk")
     $Shortcut.TargetPath = "$tpath\WGstart.cmd"
     $Shortcut.IconLocation = "C:\windows\System32\SHELL32.dll, 296"
     $Shortcut.Save()
-
-    $Shortcut = $WshShell.CreateShortcut("C:\Users\Public\Desktop\STOP $tunnelname.lnk")
+    
+    $Shortcut = $WshShell.CreateShortcut("C:\Users\Public\Desktop\Stop $tunnelname VPN.lnk")
     $Shortcut.TargetPath = "$tpath\WGstop.cmd"
     $Shortcut.IconLocation = "C:\windows\System32\SHELL32.dll, 131"
     $Shortcut.Save()
